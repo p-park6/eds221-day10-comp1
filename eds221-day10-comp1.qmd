@@ -1,0 +1,33 @@
+---
+title: "eds221-day10-comp1"
+format: html
+editor: visual
+---
+
+Write a for loop where starting with the vector : c(2,4,6,8,10,12), you add a value and the one that immediately precedes it, returning a new vector with those sums.
+
+```{r}
+vec_1 <- c(2,4,6,8,10,12) # seq(from = 2, to = 12, by = 2)
+
+my_vec <- vector(mode = "numeric", length = (length(vec_1) - 1))
+
+for(i in 2:length(vec_1)) {
+  print(vec_1[i] + vec_1[i-1])
+}
+
+for(i in length(vec_1)) {
+  print(vec_1[i] + vec_1[i + 1])
+}
+```
+
+```{r}
+ggplot(data = trees, aes(x = Height, y = Volume)) + 
+  geom_point() + 
+  theme(title = element_text(size = 18, color = "purple"),
+        plot.background = element_rect(fill = "black"),
+        panel.background = element_rect(fill = "orange"),
+        axis.title.x = element_text(colour = "green"),
+        panel.grid = element_line(color = "pink"),
+        panel.grid.minor = element_line(color = "yellow"))
+```
+
